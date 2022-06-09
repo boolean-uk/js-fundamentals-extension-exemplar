@@ -57,11 +57,7 @@ kilometersToMiles = function (kilometers) {
 makeSentence = function (string) {
   let capitalisedString = string.charAt(0).toUpperCase() + string.substring(1);
 
-  if (
-    string.charAt(string.length - 1) === '.' ||
-    string.charAt(string.length - 1) === '?' ||
-    string.charAt(string.length - 1) === '!'
-  ) {
+  if (string[string.length - 1] === '.' || string[string.length - 1] === '?' || string[string.length - 1] === '!') {
     return capitalisedString;
   } else {
     return capitalisedString + '.';
@@ -96,12 +92,15 @@ fileExtension = function (filename) {
 // Remember to update the module.exports definition at the bottom of the file
 // with a reference to your function.
 //
+// You will need to use the spread operator ... which pulls out the items of an array or object,
+// this is necessary becaus Math.max and Math.min do not accept array as a parameter.
 
 range = function (numbers) {
   let max = Math.max(...numbers);
   let min = Math.min(...numbers);
   return max - min;
 };
+
 // CheckTransactions
 //
 // Create a function that checks if a list of banking transactions is valid for
