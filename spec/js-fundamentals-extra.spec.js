@@ -49,20 +49,20 @@ describe("KilometersToMiles", () => {
 })
 
 describe("MakeSentence", () => {
+  it("'Hello world' returns 'Hello World.'", () => {
+    expect(d("Hello world")).toEqual('Hello world.')
+  })
   it("'april is the cruelest month' returns 'April is the cruelest month.'", () => {
     expect(d("april is the cruelest month")).toEqual('April is the cruelest month.')
   })
-  it("'Hello world' returns 'Hello World.'", () => {
-    expect(d("Hello world")).toEqual('Hello world.')
+  it("'This is already a sentence.' returns 'This is already a sentence.'", () => {
+    expect(d("This is already a sentence.")).toEqual('This is already a sentence.')
   })
   it("'hello world!' returns 'Hello World!'", () => {
     expect(d("hello world!")).toEqual('Hello world!')
   })
   it("'Who goes there?' returns 'Who goes there?'", () => {
     expect(d("Who goes there?")).toEqual('Who goes there?')
-  })
-  it("'This is already a sentence.' returns 'This is already a sentence.'", () => {
-    expect(d("This is already a sentence.")).toEqual('This is already a sentence.')
   })
 })
 
